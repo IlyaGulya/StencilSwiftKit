@@ -8,11 +8,11 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/shibapm/Komondor.git", .exact("1.1.3")),
-    .package(url: "https://github.com/IlyaGulya/Stencil-musl", branch: "master")
+    .package(url: "https://github.com/IlyaGulya/Stencil", branch: "master")
   ],
   targets: [
     .target(name: "StencilSwiftKit", dependencies: [
-      .product(name: "Stencil", package: "Stencil-musl")
+      "Stencil"
     ]),
     .testTarget(name: "StencilSwiftKitTests", dependencies: [
       "StencilSwiftKit"
